@@ -41,7 +41,7 @@ profiles:
   - icon: brands/github
     url: https://github.com/milarri
   - icon: brands/linkedin
-    url: https://www.linkedin.com/in/alexjohnsonai/
+    url: https://www.linkedin.com/in/martina-ilarri-b43245332/
   - icon: academicons/google-scholar
     url: https://scholar.google.pt/citations?user=Sy5XdsQAAAAJ&hl=pt-PT
   - icon: academicons/orcid
