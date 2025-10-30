@@ -1,19 +1,11 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Content Manager</title>
-  </head>
+  <head><meta charset="utf-8"><title>CMS Test</title></head>
   <body>
-    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <h1>Hello from admin page</h1>
     <script>
-      if (typeof window.CMS === "undefined") {
-        console.error("Decap CMS failed to load.");
-      } else {
-        console.log("Decap CMS loaded, initializing...");
-        CMS.init();
-      }
+      console.log("Admin page script is running");
     </script>
   </body>
 </html>
+
