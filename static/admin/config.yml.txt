@@ -1,0 +1,78 @@
+backend:
+  name: git-gateway
+  branch: main        # or 'master' if your repo uses that
+
+media_folder: "static/uploads"
+public_folder: "/uploads"
+
+site_url: "/"         # optional: helps Decap link previews
+logo_url: "/uploads/logo.png"
+
+collections:
+  # Blog posts
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "content/blog"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Summary", name: "summary", widget: "text", required: false }
+      - { label: "Featured Image", name: "featured", widget: "image", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  # Publications
+  - name: "publications"
+    label: "Publications"
+    folder: "content/publications"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Authors", name: "authors", widget: "list", required: false }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Publication Type", name: "publication_types", widget: "list", required: false }
+      - { label: "Abstract", name: "abstract", widget: "markdown", required: false }
+      - { label: "PDF / External Link", name: "url_pdf", widget: "string", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  # Projects
+  - name: "projects"
+    label: "Projects"
+    folder: "content/projects"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Summary", name: "summary", widget: "text", required: false }
+      - { label: "Featured Image", name: "featured", widget: "image", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  # Events
+  - name: "events"
+    label: "Events"
+    folder: "content/events"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Location", name: "location", widget: "string", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  # Optional: site-wide config
+  - name: "site_settings"
+    label: "Site Settings"
+    files:
+      - label: "Main Config"
+        name: "main"
+        file: "config/_default/params.yaml"
+        fields:
+          - { label: "Site Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "string", required: false }
