@@ -63,4 +63,3 @@
   [headers.values]
     Content-Type = "text/yaml; charset=utf-8"
 
-# ensure header redeploy
